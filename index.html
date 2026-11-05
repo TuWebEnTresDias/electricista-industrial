@@ -86,12 +86,14 @@
     .service-link span{color:#b99242;font-size:18px}
     .featured .service-link{color:#f1d38f}
     .work-section{background:#eceee7}
-    .work-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px;align-items:stretch}
-    .work-card{position:relative;overflow:hidden;border-radius:var(--radius);min-height:420px;background:#d6dbd1}
+    .work-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:stretch}
+    .work-card{position:relative;overflow:hidden;border-radius:var(--radius);height:380px;max-height:380px;min-height:0;background:#d6dbd1}
     .work-card img{height:100%;width:100%;object-fit:cover;transition:transform .6s}
     .work-card:hover img{transform:scale(1.035)}
-    .work-card:first-child img{object-position:center 37%}
-    .work-card:last-child img{object-position:center 46%}
+    .work-card:nth-child(1) img{object-position:center 37%}
+    .work-card:nth-child(2) img{object-position:center 46%}
+    .work-card:nth-child(3) img{object-position:center 50%}
+    .work-card:nth-child(4) img{object-position:center 50%}
     .work-card:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,rgba(15,31,22,.78))}
     .work-label{position:absolute;z-index:1;left:24px;bottom:22px;color:white}
     .work-label strong{display:block;font:500 22px/1.2 Georgia,"Times New Roman",serif}
@@ -126,7 +128,7 @@
     @media(max-width:680px){
       html{scroll-padding-top:72px}.wrap{width:min(100% - 36px,520px)}.header{height:70px}.brand-mark{width:39px;height:39px}.brand-name{font-size:18px}.header-in>.button{display:none}.mobile-toggle{display:block;cursor:pointer}.nav{display:none;position:absolute;top:69px;left:0;right:0;padding:18px;background:var(--paper);border-bottom:1px solid var(--line);box-shadow:0 18px 30px rgba(20,40,30,.1);align-items:stretch;gap:0;flex-direction:column}.nav.open{display:flex}.nav a{padding:13px 9px;border-bottom:1px solid var(--line);font-size:12px}.nav a:last-child{border-bottom:0}
       .hero-grid{display:block;min-height:720px}.hero-copy{padding:64px 0 270px}.hero:after{background:linear-gradient(180deg,#17382b 0%,#17382b 48%,rgba(23,56,43,.85) 68%,rgba(23,56,43,.35) 100%)}h1{font-size:clamp(43px,12vw,62px);margin-top:19px;max-width:560px}.hero-copy>p{font-size:15px;line-height:1.7}.hero-visual{top:auto;bottom:0;left:0;right:0;width:100%;height:330px}.hero-visual:after{background:linear-gradient(180deg,#17382b 0%,rgba(23,56,43,.1) 48%,rgba(12,28,20,.4) 100%)}.photo-note{right:18px;bottom:18px;font-size:9px}.hero-meta{font-size:11px;gap:12px;margin-top:24px}
-      .intro-inner{grid-template-columns:1fr;gap:14px;padding:34px 0}.intro-inner h2{font-size:30px}.intro-inner p{font-size:14px}.section{padding:70px 0}.section-head{margin-bottom:30px}h2.section-title{font-size:39px}.service-grid,.work-grid,.about-grid{grid-template-columns:1fr;gap:14px}.service-card{min-height:0;padding:28px 24px}.service-card h3{font-size:27px}.service-list{grid-template-columns:1fr;gap:10px}.work-card{min-height:330px}.work-card:first-child{min-height:360px}.about-grid{gap:32px}.about-art{min-height:350px;max-height:430px}.about-copy h2{font-size:39px}.about-points{gap:12px;grid-template-columns:1fr}.contact-cta{padding:54px 0}.cta-inner{display:block}.cta-inner h2{font-size:37px}.cta-inner p{margin-bottom:23px}.footer-in{align-items:flex-start;flex-direction:column}.footer-note{text-align:left}.wa-float{width:52px;height:52px;right:15px;bottom:15px}
+      .intro-inner{grid-template-columns:1fr;gap:14px;padding:34px 0}.intro-inner h2{font-size:30px}.intro-inner p{font-size:14px}.section{padding:70px 0}.section-head{margin-bottom:30px}h2.section-title{font-size:39px}.service-grid,.work-grid,.about-grid{grid-template-columns:1fr;gap:14px}.service-card{min-height:0;padding:28px 24px}.service-card h3{font-size:27px}.service-list{grid-template-columns:1fr;gap:10px}.work-card{height:300px;max-height:300px;min-height:0}.about-grid{gap:32px}.about-art{min-height:350px;max-height:430px}.about-copy h2{font-size:39px}.about-points{gap:12px;grid-template-columns:1fr}.contact-cta{padding:54px 0}.cta-inner{display:block}.cta-inner h2{font-size:37px}.cta-inner p{margin-bottom:23px}.footer-in{align-items:flex-start;flex-direction:column}.footer-note{text-align:left}.wa-float{width:52px;height:52px;right:15px;bottom:15px}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
   </style>
@@ -223,6 +225,14 @@
           <figure class="work-card">
             <img src="https://atuwfbqtoadwjamrueqm.supabase.co/storage/v1/object/public/chat-media/image/1447821850078377.jpg" alt="Tablero eléctrico con circuitos identificados" width="960" height="1280" loading="lazy">
             <figcaption class="work-label"><strong>Instalación eléctrica</strong><span>Servicio complementario</span></figcaption>
+          </figure>
+          <figure class="work-card">
+            <img src="https://atuwfbqtoadwjamrueqm.supabase.co/storage/v1/object/public/chat-media/image/1742212750174999.jpg" alt="Señalización de uso de guantes y protección ocular junto a un extintor" width="720" height="1600" loading="lazy">
+            <figcaption class="work-label"><strong>Señalización y prevención</strong><span>Higiene y Seguridad</span></figcaption>
+          </figure>
+          <figure class="work-card">
+            <img src="https://atuwfbqtoadwjamrueqm.supabase.co/storage/v1/object/public/chat-media/image/986874614474649.jpg" alt="Personal con cascos durante trabajos en una obra en construcción" width="720" height="1600" loading="lazy">
+            <figcaption class="work-label"><strong>Trabajo en obra</strong><span>Personal con elementos de protección</span></figcaption>
           </figure>
         </div>
       </div>
